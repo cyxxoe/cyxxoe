@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+  fmt.Println("Здраствуйте, введите стоимость товара.")
+  
+	var productCost int
+  fmt.Scan(&productCost)
+  
+  fmt.Println("Введите стоимость доставки.")
+  var deliveryCost int
+  fmt.Scan(&deliveryCost)
+
+  fmt.Println("Введите стоимость скидки.")
+  var sale int
+  fmt.Scan(&sale)
+
+	result := productCost + deliveryCost - sale
+	fmt.Println("Стоимость товара", productCost, "вместе с доставкой стоимостью", deliveryCost, "и учётом скидки в размере", sale, "будет равна", result, "рублей.")
+}
