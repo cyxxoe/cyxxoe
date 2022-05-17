@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("Привет, это программа вычисляет модуль числа.")
+  fmt.Println("Введите число:")
+
+  var x int
+  fmt.Scan(&x)
+
+  if x < 0 {
+    x = -x
+  }
+  fmt.Println("Модуль равен", x)
+}
