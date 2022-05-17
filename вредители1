@@ -1,0 +1,38 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("Здраствуйте! Введите скорость роста бамбука:")
+  var speedBambo int
+  fmt.Scan(&speedBambo)
+
+  fmt.Println("Введите скорость поедания бамбука гусеницами:")
+  var speedEating int
+  fmt.Scan(&speedEating)
+
+  fmt.Println("Введите высоту саженца:")
+  var height int
+  fmt.Scan(&height)
+
+  fmt.Println("Введите целевую высоту бамбука:")
+  var target int
+  fmt.Scan(&target)
+  
+  var day int
+  firstHight := height + speedBambo - speedEating
+  day += 1
+
+  if firstHight >= target {
+      fmt.Println("Бамбук вырастет на", target,"сантиметров за", day,"дней.")
+  }
+
+  dayHeight := firstHight + speedBambo - speedEating
+  day += 1
+
+  if dayHeight >= target {
+      fmt.Println("Бамбук вырастет на", target,"сантиметров за", day,"дней.")
+  }
+}
