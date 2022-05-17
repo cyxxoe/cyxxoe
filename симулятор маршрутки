@@ -1,0 +1,76 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+  
+  totalPassengers := 0
+  totalMoneyRb := 0
+  var totalDepartedPassengers int
+  var totalArrivingPassengers int
+  var driverSalary int
+  var fuelCost int
+  var taxes int
+  var carRepairCosts int
+  var margin int
+  
+	fmt.Println("Программа симуляции маршрутного такси.")
+  fmt.Println("Прибываем на остановку «Улица Программистов».")
+  fmt.Println("В салоне пассажиров:", totalPassengers)
+  fmt.Println("Сколько пассажиров вышло на остановке:")
+  fmt.Scan(&totalDepartedPassengers)
+  fmt.Println("Сколько пассажиров зашло на остановке:")
+  fmt.Scan(&totalArrivingPassengers)
+
+  totalPassengers += totalArrivingPassengers - totalDepartedPassengers
+  totalMoneyRb += totalArrivingPassengers*20
+
+  fmt.Println("-----Едем-----")
+  fmt.Println("Прибываем на остановку «Проспект Алгоритмов».")
+  fmt.Println("В салоне пассажиров:", totalPassengers)
+  fmt.Println("Сколько пассажиров вышло на остановке:")
+  fmt.Scan(&totalDepartedPassengers)
+  fmt.Println("Сколько пассажиров зашло на остановке:")
+  fmt.Scan(&totalArrivingPassengers)
+
+  totalPassengers += totalArrivingPassengers - totalDepartedPassengers
+  totalMoneyRb += totalArrivingPassengers*20
+
+   fmt.Println("-----Едем-----")
+  fmt.Println("Прибываем на остановку «Переулок ботаников».")
+  fmt.Println("В салоне пассажиров:", totalPassengers)
+  fmt.Println("Сколько пассажиров вышло на остановке:")
+  fmt.Scan(&totalDepartedPassengers)
+  fmt.Println("Сколько пассажиров зашло на остановке:")
+  fmt.Scan(&totalArrivingPassengers)
+
+  totalPassengers += totalArrivingPassengers - totalDepartedPassengers
+  totalMoneyRb += totalArrivingPassengers*20
+
+  fmt.Println("-----Едем-----")
+  fmt.Println("Прибываем на остановку «Бульвар умножения».")
+  fmt.Println("В салоне пассажиров:", totalPassengers)
+  fmt.Println("Сколько пассажиров вышло на остановке:")
+  fmt.Scan(&totalDepartedPassengers)
+  fmt.Println("Сколько пассажиров зашло на остановке:")
+  fmt.Scan(&totalArrivingPassengers)
+
+  totalMoneyRb += totalArrivingPassengers*20
+  driverSalary = totalMoneyRb/4
+  fuelCost = totalMoneyRb/5
+  taxes = totalMoneyRb/5
+  carRepairCosts = totalMoneyRb/5
+  margin = totalMoneyRb - driverSalary - fuelCost - taxes - carRepairCosts
+  
+  
+  fmt.Println("---------")
+  fmt.Print("Всего заработали: ", totalMoneyRb," рублей.\n")
+  fmt.Print("Зарплата водителя: ", driverSalary," рублей.\n")
+  fmt.Print("Расходы на топливо: ", fuelCost," рублей.\n")
+  fmt.Print("Налоги: ", taxes," рублей.\n")
+  fmt.Print("Расходы на ремонт машины: ", carRepairCosts," рублей.\n")
+  fmt.Print("Итого доход: ", margin," рублей.\n")
+  
+}
