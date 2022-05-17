@@ -1,0 +1,26 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("Привет! Эта программа вычисляет, сумеет ли добраться автомобиль до Рязани за два часа.")
+	fmt.Println("Введите среднюю скорость автомобиля:")
+
+	/*
+	  Средняя скорость измеряется в КМ/Ч, а время в часах.
+	*/
+	time := 2
+	var distance int
+	var speed int
+	fmt.Scan(&speed)
+
+	distance = time * speed
+
+	if distance >= 200 {
+		fmt.Println("Вы приехали.")
+	}
+
+  fmt.Println("Вы проехали", distance,"километров.")
+}
