@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("Введите логин")
+	var login string
+	fmt.Scan(&login)
+
+	fmt.Println("Введите пароль")
+	var password string
+	fmt.Scan(&password)
+
+	fmt.Println("--------")
+	fmt.Println(login,"вы успешно зашли!")
+}
