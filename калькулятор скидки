@@ -1,0 +1,31 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+  fmt.Println("Здраствуйте, введите стоимость первого товара.")
+  
+	var firstAmount int
+  fmt.Scan(&firstAmount)
+  
+  fmt.Println("Введите стоимость второго товара.")
+  var secondAmount int
+  fmt.Scan(&secondAmount)
+
+  fmt.Println("Введите стоимость третьего товара.")
+  var thirdAmount int
+  fmt.Scan(&thirdAmount)
+
+	result := firstAmount + secondAmount + thirdAmount
+
+  if result > 10000 {
+      sale := result / 10
+      result -= sale
+      fmt.Println("Стоимость товаров превышает 10000, поэтому вы получаете скидку 10% на заказ")
+  }
+  
+	fmt.Println("-------")
+  fmt.Println("Итого:", result)
+}
